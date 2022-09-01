@@ -1,0 +1,112 @@
+/*
+6. Em uma eleição presidencial existem quatro candidatos. Os votos são informados
+através de códigos. Os dados utilizados para a contagem dos votos obedecem à
+seguinte codificação:
+- 1,2,3,4 = voto para os respectivos candidatos;
+- 5 = voto nulo;
+- 6 = voto em branco;
+Elabore um programa que leia o código do candidato em um voto. Calcule e escreva:
+- total de votos para cada candidato;
+- total de votos nulos;
+- total de votos em branco;
+Como finalizador do conjunto de votos, tem-se o valor 0.
+
+*/
+
+
+#include<stdio.h>
+
+int main()
+{
+	
+	int candidato1, candidato2, candidato3, candidato4, votoNulo, votoBranco, opcao; 
+	
+	candidato1 = 0;
+	candidato2 = 0;
+	candidato3 = 0;
+	candidato4 = 0;
+	votoNulo = 0;
+	votoBranco = 0;
+	
+	printf("1 - candidato 1");
+	printf("\n2 - candidato 2");
+	printf("\n3 - candidato 3");
+	printf("\n4 - candidato 4");
+	printf("\n5 - Voto nulo");
+	printf("\n6 - Voto em branco\n");
+	printf("\nDigite o seu voto: \n");
+	scanf("%d", &opcao);
+	   
+	/*do
+	{
+	   
+	   printf("\nDigite o seu voto: \n");
+	   scanf("%d", &opcao);
+	   
+	   if(opcao == 1)
+	   {
+	   		candidato1 = candidato1 + 1;
+	   }
+	   else if(opcao == 2){
+	   		candidato2 = candidato2 + 1;
+	   }
+	   else if(opcao == 3)
+	   {
+	   		candidato3 = candidato3 + 1;
+	   }
+	   else if(opcao == 4){
+	   		candidato4 = candidato4 + 1;
+	   }
+	   else if(opcao == 5)
+	   {
+	   		votoNulo = votoNulo +1;
+	   }
+	   else if(opcao == 6)
+	   {
+	   		votoBranco = votoBranco + 1;
+	   }
+	   else
+	   {
+	   		printf("Número invalido!");
+	   }
+		
+	}while(opcao != 0);
+	*/
+	
+	while(opcao != 0)
+	{
+		switch (opcao)
+		{
+			case 1:
+				candidato1++;
+				break;
+			case 2:
+				candidato2++;
+				break;
+			case 3: 
+				candidato3++;
+				break;
+			case 4: 
+				candidato4++;
+				break;
+			case 5:
+				votoNulo++;
+				break;
+			case 6:
+				votoBranco++;
+				break;
+		}
+		printf("\nDigite o seu voto: \n");
+		scanf("%d", &opcao);	
+	}
+		
+	printf("Total de votos: \n");
+	printf("Candidato 01: %d\n", candidato1);
+	printf("Candidato 02: %d\n", candidato2);
+	printf("Candidato 03: %d\n", candidato3);
+	printf("candidato 04: %d\n", candidato4);
+	printf("Votos Nulos: %d\n", votoNulo);
+	printf("Votos em Branco %d\n", votoBranco);
+	
+	return 0;
+}
